@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.sphere {
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			transition: 1s;
+			border-radius: 100px;
+			left: 100px;
+			top: 500px;
+		}
+		.shar {
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			transition: 1s;
+			border-radius: 100px;
+			left: 500px;
+			top: 500px;
+		}
+		.bob {
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			transition: 1s;
+			border-radius: 100px;
+			left: 800px;
+			top: 500px;
+		}
+		.bg {
+			background-image: url(https://rare-gallery.com/uploads/posts/1221130-hillside-forest.jpg);
+		}
+		.score {
+			color: skyblue;
+		}
+	</style>
+</head>
+<body class="bg">
+	<h1 class="score"> 0</h1>
+	<div class="sphere">
+		<img src="myha.png" style="width: 50px;">
+	</div>
+
+	<div class="shar">
+		<img src="myha.png" style="width: 50px;">
+	</div>
+	
+	<div class="bob">
+		<img src="myha.png" style="width: 50px;">
+	</div>
+<script type="text/javascript">
+	let score = 0;
+
+	let mydiv = document.querySelector(".sphere");
+	document.querySelector('.sphere').onclick = function() {
+		alert('вы прихлопнули муху');
+		document.querySelector('.sphere').style.display = "none";
+		score = score + 1;
+		document.querySelector('.score').innerHTML = score;
+		if (score==3) {
+			alert("теперь никакой чорт вас не искусает!")
+	}
+}
+	let leftP = 100;
+	let topP = 500;
+
+
+	let moveLeft = function() {
+		let random = Math.random() * 1000; //делает рандом, только не целые числа
+	    let round = Math.round(random); //округляет число
+		mydiv.style.left = round + "px"
+		document.querySelector(".sphere")
+	}
+
+	let moveTop = function() {
+		let random = Math.random() * 1000;
+		let round = Math.round(random);
+		mydiv.style.top = round + "px"
+	}
+
+	setInterval(moveLeft, 1000);
+	setInterval(moveTop, 1000);
+
+
+    let ourdiv = document.querySelector(".shar");
+    document.querySelector('.shar').onclick = function() {
+		alert('вы прихлопнули муху');
+		document.querySelector('.shar').style.display = "none";
+		score = score + 1;
+		document.querySelector('.score').innerHTML = score;
+		if (score==3) {
+			alert("теперь никакой чорт вас не искусает!")
+	}
+}
+	let leftP2 = 100;
+	let topP2 = 500;
+
+
+	let moveLeft2 = function() {
+		let random = Math.random() * 1000; //делает рандом, только не целые числа
+	    let round = Math.round(random); //округляет число
+		ourdiv.style.left = round + "px"
+	}
+
+	let moveTop2 = function() {
+		let random = Math.random() * 1000;
+		let round = Math.round(random);
+		ourdiv.style.top = round + "px"
+	}
+
+	setInterval(moveLeft2, 1000);
+	setInterval(moveTop2, 1000);
+
+
+
+
+    let hisdiv = document.querySelector(".bob");
+    document.querySelector('.bob').onclick = function() {
+		alert('вы прихлопнули муху');
+		document.querySelector('.bob').style.display = "none";
+		score = score + 1;
+		document.querySelector('.score').innerHTML = score;
+		if (score==3) {
+			alert("теперь никакой чорт вас не искусает!")
+	}
+}
+	let leftP3 = 100;
+	let topP3 = 500;
+
+
+	let moveLeft3 = function() {
+		let random = Math.random() * 1000; //делает рандом, только не целые числа
+	    let round = Math.round(random); //округляет число
+		hisdiv.style.left = round + "px"
+	}
+
+	let moveTop3 = function() {
+		let random = Math.random() * 1000;
+		let round = Math.round(random);
+		hisdiv.style.top = round + "px"
+	}
+
+	setInterval(moveLeft3, 1000);
+	setInterval(moveTop3, 1000);
+
+</script>
+</body>
+</html>
